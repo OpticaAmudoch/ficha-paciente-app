@@ -1,0 +1,56 @@
+body { font-family: Arial, sans-serif; }
+.container {
+  width: 794px; /* Tamaño A4 aprox */
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+.section { margin-bottom: 15px; }
+.section label { display: block; margin-bottom: 5px; font-weight: bold; }
+.section input, .section select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.graduacion-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+  gap: 10px;
+  align-items: center; /* Alinear verticalmente los elementos */
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los botones */
+  margin-top: 20px;
+}
+.button {
+  flex: 1; /* Permite que los botones crezcan y ocupen el espacio disponible */
+  margin: 5px; /* Pequeño margen entre botones */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para impresión */
+@media print {
+  .button-container {
+    display: none; /* Oculta los botones al imprimir */
+  }
+  .container {
+    border: none; /* Elimina el borde del contenedor en la impresión */
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupa el ancho completo de la página de impresión */
+  }
+  /* Puedes añadir más estilos para optimizar la impresión si es necesario */
+}

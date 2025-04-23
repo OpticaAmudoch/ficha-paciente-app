@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ficha de Paciente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="ficha">
+    <h1>Ficha de Paciente</h1>
+    <div class="section"><label for="numero_sobre">Número de Sobre</label><input type="text" id="numero_sobre"></div>
+    <div class="section"><label for="nombre">Nombre</label><input type="text" id="nombre"></div>
+    <div class="section"><label for="apellido">Apellido</label><input type="text" id="apellido"></div>
+    <div class="section"><label for="dni">DNI</label><input type="text" id="dni"></div>
+    <div class="section"><label for="telefono">Teléfono</label><input type="tel" id="telefono"></div>
+    <div class="section"><label for="fecha">Fecha</label><input type="date" id="fecha"></div>
+    <div class="section">
+      <label>Graduación Lejos</label>
+      <div class="graduacion-container">
+        <span>OD</span>
+        <input type="text" id="lejos_od_esf" placeholder="Esf">
+        <input type="text" id="lejos_od_cil" placeholder="Cil">
+        <input type="text" id="lejos_od_eje" placeholder="Eje">
+        <span>OI</span>
+        <input type="text" id="lejos_oi_esf" placeholder="Esf">
+        <input type="text" id="lejos_oi_cil" placeholder="Cil">
+        <input type="text" id="lejos_oi_eje" placeholder="Eje">
+      </div>
+    </div>
+    <div class="section">
+      <label>Graduación Cerca</label>
+      <div class="graduacion-container">
+        <span>OD</span>
+        <input type="text" id="cerca_od_esf" placeholder="Esf">
+        <input type="text" id="cerca_od_cil" placeholder="Cil">
+        <input type="text" id="cerca_od_eje" placeholder="Eje">
+        <span>OI</span>
+        <input type="text" id="cerca_oi_esf" placeholder="Esf">
+        <input type="text" id="cerca_oi_cil" placeholder="Cil">
+        <input type="text" id="cerca_oi_eje" placeholder="Eje">
+      </div>
+    </div>
+    <div class="section"><label for="tipo_cristal">Tipo de Cristal</label><input type="text" id="tipo_cristal"></div>
+    <div class="section">
+      <label for="tipo_armazon">Tipo de Armazón</label>
+      <select id="tipo_armazon">
+        <option value="metalico">Metálico</option>
+        <option value="plastico">Plástico</option>
+        <option value="mixto">Mixto</option>
+      </select>
+    </div>
+    <div class="section">
+      <label for="tipo_montaje">Tipo de Montaje</label>
+      <select id="tipo_montaje">
+        <option value="aro_completo">Aro Completo</option>
+        <option value="ranurado">Ranurado</option>
+        <option value="montado">Montado</option>
+      </select>
+    </div>
+    <div class="section">
+      <label for="estado_armazon">Estado del Armazón</label>
+      <select id="estado_armazon">
+        <option value="nuevo">Nuevo</option>
+        <option value="usado">Usado</option>
+      </select>
+    </div>
+    <div class="section"><label for="marca_armazon">Marca del Armazón</label><input type="text" id="marca_armazon"></div>
+    <div class="section"><label for="modelo_armazon">Modelo del Armazón</label><input type="text" id="modelo_armazon"></div>
+    <div class="section"><label for="codigo_interno">Código Interno</label><input type="text" id="codigo_interno"></div>
+    <div class="button-container">
+      <button class="button" onclick="imprimirFormulario()">Imprimir Ficha</button>
+      <button class="button" onclick="guardarTXT()">Guardar Ficha</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
